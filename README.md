@@ -13,7 +13,7 @@ The `.txt` files are the original datasets, while files with the suffix `.bin` a
 
 We only use binary format for the input graph which can be converted by `toBin` from [ListPlex](https://github.com/joey001/ListPlex). 
 ```bash
- ./toBin \<input\> \<output\>
+ ./toBin <input> <output>
 ```
 **Example**
 ```bash
@@ -33,7 +33,7 @@ make
 ```
 #### Usage Instruction
 ```bash
-./kplexlist \<dataset\> \<k\> \<lb\>
+./kplexlist <dataset> <k> <lb>
 ```
 k is the maximum number of non-neighbors of a k-plex
 
@@ -59,7 +59,7 @@ make
 ```
 #### Usage Instruction
 ```bash
-./kplexlist \<dataset\> \<k\> \<lb\> \<thread-number\>
+./kplexlist <dataset> <k> <lb> <thread-number>
 ```
 k is the maximum number of non-neighbors of a k-plex
 
