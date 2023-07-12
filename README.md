@@ -1,5 +1,5 @@
 # kPlexList
-The code of paper “DPlex”
+The code of paper “Efficient Enumeration of Large Maximal k-Plexes”
 
 The sequential algorithm is in the file "Plex_seq".
 
