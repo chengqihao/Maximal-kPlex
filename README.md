@@ -44,6 +44,7 @@ lb is the lower bound of k-plex.
 ./kplexlist ../dataset/jazz.bin 4 12
 ```
 #### Result
+Partial results are shown in the following table
 | Dataset | $n$ | $m$ | $k$ | $q$ | #𝑘-plexes | time/sec |
 |-------------|:-----:|:------:|:-:|:--:|:--------:|:-----:|
 | jazz | 198| 2742 | 4 | 12 | 2745953 | 2.87 |
