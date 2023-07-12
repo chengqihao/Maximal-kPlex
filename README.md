@@ -1,4 +1,4 @@
-# Plexlist
+# kPlexList
 The code of paper “DPlex”
 
 The sequential algorithm is in the file "Plex_seq".
