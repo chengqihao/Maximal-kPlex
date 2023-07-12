@@ -1,5 +1,5 @@
 # Branch and Bound Algorithm
-# Setup
+# Compile the code:
 ```shell
 make
 ```
