@@ -3,7 +3,7 @@
 #define CAP_LIMIT2 (1<<14)
 #define PSIZE_LIMIT  4096 //Maximum possible size of K-plex
 #define K_LIMIT 4
-#define TIMEOUT_THRESH 0.1 // in millisecond
+//#define TIMEOUT_THRESH 0.1 // in millisecond
 
 // openmp
 #if defined(OPENMP)
