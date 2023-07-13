@@ -59,7 +59,7 @@ make
 ```
 #### Usage Instruction
 ```bash
-./kplexlist <dataset> <k> <lb> <thread-number>
+./kplexlist [-d <dataset>] [-k <k>] [-lb <lb>] [-tau <timeout threshold>(default 0.1)] [-t <thread number>]
 ```
 k is the maximum number of non-neighbors of a k-plex
 
@@ -69,7 +69,7 @@ thread-number is the number of threads used
 
 **Run The Example**
 ```bash
-./kplexlist ../dataset/jazz.bin 4 12 16
+./kplexlist -d ../dataset/jazz.bin -k 4 -lb 12 -tau 0.1 -t 16
 ```
 #### Result
 We tested our parallel algorithm on large graphs and demonstrated the speedup achieved when setting the timeout threshold $\tau=0.1 \mathrm{ms}$. Here are some partial results.
