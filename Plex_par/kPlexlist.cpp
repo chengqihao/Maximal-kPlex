@@ -521,9 +521,16 @@ namespace kPlexList{
         peelG.del();
     }
 }
-
-int main(int argc, char **argv)
-{
+void usage() {
+    fprintf(stderr, "usage: ./kplexlist -d <dataset> -k <k> -lb <lb> [-tau timeout threshold (default 0.1)] [-t thread(default maximum)]\n");
+}
+int check_inc(int i, int max) {
+    if (i == max) {
+        usage();
+        exit(1);
+    }
+    return i + 1;
+}
 int main(int argc, char **argv)
 {
     //printf("file: %s\n", argv[1]);
