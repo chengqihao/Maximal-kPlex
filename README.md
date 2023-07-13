@@ -33,7 +33,7 @@ make
 ```
 #### Usage Instruction
 ```bash
-./kplexlist <dataset> <k> <lb>
+./kplexlist [-d <dataset>] [-k <k>] [-lb <lb>]
 ```
 k is the maximum number of non-neighbors of a k-plex
 
@@ -41,7 +41,7 @@ lb is the lower bound of k-plex.
 
 **Run The Example**
 ```bash
-./kplexlist ../dataset/jazz.bin 4 12
+./kplexlist -d ../dataset/jazz.bin -k 4 -lb 12
 ```
 #### Result
 Partial results are shown in the following table
@@ -65,7 +65,9 @@ k is the maximum number of non-neighbors of a k-plex
 
 lb is the lower bound of k-plex.
 
-thread-number is the number of threads used
+tau is the user-defined task timeout threshold
+
+thread number is the number of threads used
 
 **Run The Example**
 ```bash
