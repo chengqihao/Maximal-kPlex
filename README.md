@@ -2,9 +2,9 @@
 The code of paper “Efficient Enumeration of Large Maximal k-Plexes”
 
 ## Algorithm
-The sequential algorithm is in the file "Plex_seq".
+The sequential algorithm is in the file "Sequential".
 
-The parallel version is in the file "Plex_par".
+The parallel version is in the file "Parallel".
 
 ## Datasets
 We provide some small datasets in the file "datasets". 
@@ -28,7 +28,7 @@ All the datasets can be found on SNAP and LAW
 ### Sequential Algorithm
 #### Compile The Code
 ```shell
-cd Plex_seq
+cd Sequential
 make
 ```
 #### Usage Instruction
@@ -54,7 +54,7 @@ Partial results are shown in the following table
 ### Parallel Algorithm
 #### Compile The Code
 ```shell
-cd Plex_par
+cd Parallel
 make
 ```
 #### Usage Instruction
