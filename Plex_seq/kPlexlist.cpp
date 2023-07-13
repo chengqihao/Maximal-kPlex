@@ -485,19 +485,45 @@ namespace kPlexList{
     }
 }
 
+void usage() {
+    fprintf(stderr, "usage: ./kplexlist -d <dataset> -k <k> -lb <lb> \n");
+}
+int check_inc(int i, int max) {
+    if (i == max) {
+        usage();
+        exit(1);
+    }
+    return i + 1;
+}
 int main(int argc, char **argv)
 {
-    printf("file: %s\n", argv[1]);
-    if (argc == 4){       
-        k = atoi(argv[2]);
-        lb = atoi(argv[3]);
-        bd=lb-k;
-        printf("k=%d, lowerbound=%d\n",k,lb);
-        graph<intT> g = kPlexList::readBinaryGraph(argv[1]); 
-        kPlexList::decomposableSearch(g);
-        g.del();
-    }else {
-        fprintf(stderr, "usage: kplexlist <filename> <k> <lb>\n");
+    int i = 1;
+    char *filename;
+    char* endptr;
+    while(i<argc){
+        if(!strcmp(argv[i],"-d")){
+            i = check_inc(i, argc);
+            filename = argv[i];
+        }
+       else if(!strcmp(argv[i],"-k")){
+            i = check_inc(i, argc);
+            k = atoi(argv[i]);
+        }
+       else if(!strcmp(argv[i],"-lb")){
+            i = check_inc(i, argc);
+            lb = atoi(argv[i]);
+        }
+        else {
+            usage();
+            exit(1);
+        }
+        i++;
     }
+    printf("file: %s\n",filename);
+    printf("k=%d,lb=%d\n",k,lb);
+    bd = lb-k;
+    graph<intT> g = kPlexList::readBinaryGraph(filename); 
+    kPlexList::decomposableSearch(g);
+    g.del();
     return 0;
 }
