@@ -524,22 +524,52 @@ namespace kPlexList{
 
 int main(int argc, char **argv)
 {
-    printf("file: %s\n", argv[1]);
-    if (argc == 4||argc == 5){       
-        k = atoi(argv[2]);
-        lb = atoi(argv[3]);
-        bd=lb-k;
-        printf("k=%d, lowerbound=%d\n",k,lb);
-        if(argc==5)
-            setWorkers(workers = atoi(argv[4]));
-        else
-            workers = getWorkers();
-        printf("number of thread: %d\n",workers);
-        graph<intT> g = kPlexList::readBinaryGraph(argv[1]); 
-        kPlexList::decomposableSearch(g);
-        g.del();
-    }else {
-        fprintf(stderr, "usage: kplexlist <filename> <k> <lb> [thread]\n");
+int main(int argc, char **argv)
+{
+    //printf("file: %s\n", argv[1]);
+    int i = 1;
+    char *filename;
+    char* endptr;
+    workers = getWorkers();
+    while(i<argc){
+        if(!strcmp(argv[i],"-d")){
+            i = check_inc(i, argc);
+            filename = argv[i];
+        }
+       else if(!strcmp(argv[i],"-k")){
+            i = check_inc(i, argc);
+            k = atoi(argv[i]);
+        }
+       else if(!strcmp(argv[i],"-lb")){
+            i = check_inc(i, argc);
+            lb = atoi(argv[i]);
+        }
+        else if(!strcmp(argv[i],"-tau")){
+            i = check_inc(i, argc);
+            TIMEOUT_THRESH = strtod(argv[i],&endptr);
+            if(TIMEOUT_THRESH==0&&endptr){
+                printf("Invalid threshold argument");
+                exit(1);
+            }
+        }
+        else if(!strcmp(argv[i],"-t")){
+            i = check_inc(i, argc);
+            workers = atoi(argv[i]);
+        }
+        else {
+            usage();
+            exit(1);
+        }
+        i++;
     }
+    printf("file: %s\n",filename);
+    printf("k=%d,lb=%d\n",k,lb);
+    setWorkers(workers);
+    printf("thread number : %d\n",workers);
+    printf("timeout threshold: %.3f\n",TIMEOUT_THRESH);
+    bd = lb-k;
+    graph<intT> g = kPlexList::readBinaryGraph(filename); 
+    kPlexList::decomposableSearch(g);
+    g.del();
     return 0;
 }
