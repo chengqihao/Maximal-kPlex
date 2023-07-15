@@ -67,7 +67,7 @@ lb is the lower bound of k-plex.
 
 tau is the user-defined task timeout threshold
 
-thread number is the number of threads used
+t is the number of threads used
 
 **Run The Example**
 ```bash
