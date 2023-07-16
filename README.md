@@ -11,7 +11,9 @@ We provide some small datasets in the file "datasets".
 
 The `.txt` files are the original datasets, while files with the suffix `.bin` are preprocessed files we use. 
 
-We only use binary format for the input graph which can be converted by `toBin` from [ListPlex](https://github.com/joey001/ListPlex). 
+We only use binary format for the input graph which can be converted by `toBin` from [ListPlex](https://github.com/joey001/ListPlex).
+
+`toBin` is also included in “Sequential” and "Parallel" 
 ```bash
  ./toBin <input> <output>
 ```
