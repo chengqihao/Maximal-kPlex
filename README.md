@@ -35,7 +35,7 @@ make
 ```
 #### Usage Instruction
 ```bash
-./kplexlist [-d <dataset>] [-k <k>] [-lb <lb>]
+./PlexEnum [-d <dataset>] [-k <k>] [-lb <lb>]
 ```
 k is the maximum number of non-neighbors of a k-plex
 
@@ -43,7 +43,7 @@ lb is the lower bound of k-plex.
 
 **Run The Example**
 ```bash
-./kplexlist -d ../dataset/jazz.bin -k 4 -lb 12
+./PlexEnum -d ../dataset/jazz.bin -k 4 -lb 12
 ```
 #### Result
 Partial results are shown in the following table
@@ -61,7 +61,7 @@ make
 ```
 #### Usage Instruction
 ```bash
-./kplexlist [-d <dataset>] [-k <k>] [-lb <lb>] [-tau <timeout threshold>(default 0.1)] [-t <thread number>]
+./PlexEnum [-d <dataset>] [-k <k>] [-lb <lb>] [-tau <timeout threshold>(default 0.1)] [-t <thread number>]
 ```
 k is the maximum number of non-neighbors of a k-plex
 
@@ -73,7 +73,7 @@ t is the number of threads used
 
 **Run The Example**
 ```bash
-./kplexlist -d ../dataset/jazz.bin -k 4 -lb 12 -tau 0.1 -t 16
+./PlexEnum -d ../dataset/jazz.bin -k 4 -lb 12 -tau 0.1 -t 16
 ```
 #### Result
 We tested our parallel algorithm on large graphs and demonstrated the speedup achieved when setting the timeout threshold $\tau=0.1 \mathrm{ms}$. Here are some partial results.
