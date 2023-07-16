@@ -1,7 +1,7 @@
 int workers;
 #include <atomic>
 #include <cmath>
-#include "kPlexenum.h"
+#include "kPlexEnum.h"
 #include <queue>
 
 namespace kPlexEnum{
