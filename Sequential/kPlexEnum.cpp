@@ -486,7 +486,7 @@ namespace kPlexEnum{
 }
 
 void usage() {
-    fprintf(stderr, "usage: ./kplexlist -d <dataset> -k <k> -lb <lb> \n");
+    fprintf(stderr, "usage: ./PlexEnum -d <dataset> -k <k> -lb <lb> \n");
 }
 int check_inc(int i, int max) {
     if (i == max) {
