@@ -522,7 +522,7 @@ namespace kPlexEnum{
     }
 }
 void usage() {
-    fprintf(stderr, "usage: ./kplexenum -d <dataset> -k <k> -lb <lb> [-tau timeout threshold (default 0.1)] [-t thread(default maximum)]\n");
+    fprintf(stderr, "usage: ./PlexEnum -d <dataset> -k <k> -lb <lb> [-tau timeout threshold (default 0.1)] [-t thread(default maximum)]\n");
 }
 int check_inc(int i, int max) {
     if (i == max) {
