@@ -60,7 +60,7 @@ cd Parallel
 make
 ```
 #### Usage Instruction
-**Note**: Before testing the code, we bind each thread to one CPU core based on the default distribution.
+**Note**: Before testing the code, we bind each thread to one CPU core.
 
 ```
 export OMP_PROC_BIND=true OMP_PLACES=cores
