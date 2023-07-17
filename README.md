@@ -7,7 +7,7 @@ The sequential algorithm is in the file "Sequential".
 The parallel version is in the file "Parallel".
 
 ## Datasets
-We provide some small datasets in the file "datasets". 
+We provide some small datasets in the file "Datasets". 
 
 The `.txt` files are the original datasets, while files with the suffix `.bin` are preprocessed files we use. 
 
@@ -19,7 +19,7 @@ We only use binary format for the input graph which can be converted by `toBin` 
 ```
 **Example**
 ```bash
- ./toBin ./dataset/jazz.txt ./dataset/jazz.bin
+ ./toBin ./Dataset/jazz.txt ./Dataset/jazz.bin
 ```
 All the datasets can be found on SNAP and LAW
 ## Experiment
@@ -43,7 +43,7 @@ q is the lower bound of k-plex.
 
 **Run The Example**
 ```
-./PlexEnum ../dataset/jazz.bin -k 4 -q 12
+./PlexEnum ../Dataset/jazz.bin -k 4 -q 12
 ```
 #### Result
 Partial results are shown in the following table
@@ -73,7 +73,7 @@ t is the number of threads used
 
 **Run The Example**
 ```
-./PlexEnum ../dataset/jazz.bin -k 4 -q 12 -tau 0.1 -t 16
+./PlexEnum ../Dataset/jazz.bin -k 4 -q 12 -tau 0.1 -t 16
 ```
 #### Result
 We tested our parallel algorithm on large graphs and demonstrated the speedup achieved when setting the timeout threshold $\tau=0.1 \mathrm{ms}$. Here are some partial results.
