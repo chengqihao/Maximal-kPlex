@@ -59,11 +59,11 @@ Partial results are shown in the following table
 cd Parallel
 make
 ```
+#### Usage Instruction
 Before testing the code, we bind each thread to one CPU core based on the default distribution.
 ```
 export OMP_PROC_BIND=true OMP_PLACES=cores
 ```
-#### Usage Instruction
 ```
 ./PlexEnum <dataset> -k <k> -q <lb> [-tau <timeout threshold>(default 0.1)] [-t <thread number>]
 ```
