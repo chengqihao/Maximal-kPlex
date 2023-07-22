@@ -1,5 +1,5 @@
 # Efficient Enumeration of Large Maximal $k$-Plexes
-Source codes and appendix of paper “Efficient Enumeration of Large Maximal $k$-Plexes”.
+Source codes and appendices of paper “Efficient Enumeration of Large Maximal $k$-Plexes”.
 
 ## Algorithm
 The sequential algorithm is in the file "Sequential".
