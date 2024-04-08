@@ -258,7 +258,7 @@ int readRawDIM10Text(const char* filepath) {
 int writeBinaryGraph(const char* filepath) {
 	FILE *f = open_file(filepath, "wb");
 	ui tt = sizeof(ui);
-	fwrite(&tt, sizeof(ui), 1, f); //length of ui
+	//fwrite(&tt, sizeof(ui), 1, f); //length of ui
 	fwrite(&n, sizeof(ui), 1, f);
 	fwrite(&m, sizeof(ui), 1, f);
 	ui *degree = new ui[n];
