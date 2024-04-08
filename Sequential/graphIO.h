@@ -32,12 +32,12 @@ namespace kPlexEnum{
       Timer watch1;
       watch1.start();
       FILE *f = utils::open_file(filepath, "rb");
-      uintT tt;
+      //uintT tt;
       //utils::fread_wall(&tt, sizeof(uintT), 1, f);
-      if (tt != sizeof(uintT))
-      {
-          printf("sizeof unsigned int is different: file %u, machine %lu\n", tt, sizeof(uintT));
-      }
+      //if (tt != sizeof(uintT))
+      //{
+      //    printf("sizeof unsigned int is different: file %u, machine %lu\n", tt, sizeof(uintT));
+      //}
       uintT n, m;
       utils::fread_wall(&n, sizeof(uintT), 1, f); //number of vertices
       utils::fread_wall(&m, sizeof(uintT), 1, f); //number of edges
