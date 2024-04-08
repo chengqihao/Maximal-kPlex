@@ -15,7 +15,7 @@ namespace kPlexEnum{
     std::vector<ui> nodes;
     FILE *f = utils::open_file(filepath, "wb");
     ui tt = sizeof(ui);
-    fwrite(&tt, sizeof(ui), 1, f); //length of ui
+    //fwrite(&tt, sizeof(ui), 1, f); //length of ui
     fwrite(&(g.n), sizeof(ui), 1, f);
     fwrite(&(g.m), sizeof(ui), 1, f);
     ui *degree = new ui[g.n];
