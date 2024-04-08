@@ -33,7 +33,7 @@ namespace kPlexEnum{
       watch1.start();
       FILE *f = utils::open_file(filepath, "rb");
       uintT tt;
-      utils::fread_wall(&tt, sizeof(uintT), 1, f);
+      //utils::fread_wall(&tt, sizeof(uintT), 1, f);
       if (tt != sizeof(uintT))
       {
           printf("sizeof unsigned int is different: file %u, machine %lu\n", tt, sizeof(uintT));
