@@ -10,6 +10,10 @@ ifdef OPT
 endif
 #-fcilkplus
 
+ifdef SET
+	FLAG := $(FLAG) -DSET
+endif
+
 all: 
 	g++ $(FLAG) kPlexEnum.cpp -o PlexEnum
 	g++ toBin.cpp -o toBin

@@ -8,9 +8,19 @@ long cntT=0;
 namespace kPlexEnum{
     struct PlexEmitor{
         //only count the number
+        #ifdef SET
+        void emitPlex(Stack<int> * plex){
+            for (int i = 0; i < plex->sz; i++) {
+                cout << plex->members[i] << " ";
+            }
+            cout << "\n";
+            cntT++;
+        }
+        #else
         void emitPlex(){
             cntT++;
         }
+        #endif
     };
     struct DecomposeMaxChecker{
         const graph<int> subg;

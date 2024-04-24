@@ -424,7 +424,11 @@ namespace kPlexEnum{
             }
             if (flag&&plexMaxChecker->isMaximal(plex->members, plex->sz, neiInP))
             {
+                #ifdef SET
+                emitor->emitPlex(plex);
+                #else
                 emitor->emitPlex();
+                #endif
             }
             plex->sz -= cand1->sz;
             neiInP = tmp;
@@ -461,7 +465,11 @@ namespace kPlexEnum{
             if(cand1->sz == 0){
                 if (excl->sz == 0 && plexMaxChecker->isMaximal(plex->members, plex->sz, neiInP))
                 {
+                    #ifdef SET
+                    emitor->emitPlex(plex);
+                    #else
                     emitor->emitPlex();
+                    #endif
                 }
                 return;
             }
