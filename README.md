@@ -34,6 +34,11 @@ All the datasets can be found on SNAP and LAW
 cd Sequential
 make
 ```
+The default mode is to output the number of $k$-Plexes. If you want to output the set of $k$-Plexes, please Please set $\text{SET}=1$ when compiling
+```
+cd Sequential
+make SET=1
+```
 #### Usage Instruction
 ```
 ./PlexEnum <dataset> -k <k> -q <q>
